@@ -1,0 +1,64 @@
+@media (prefers-color-scheme: light) {
+  * {
+    --fg: #111;
+    --bg: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    --fg: #eee;
+    --bg: #111;
+  }
+}
+
+.sr-only {
+  position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+body.color-scheme-dark {
+  color: #eee;
+  background-color: #111;
+}
+
+body.color-scheme-light {
+  color: #111;
+  background-color: #eee;
+}
+
+.logo {
+  display: inline-block;
+  width: 6.4rem;
+  height: 6.4rem;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme: light) {
+  .logo {
+    background-image: url(allthatdev-light.png);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    background-image: url(allthatdev-dark.png);
+  }
+}
+
