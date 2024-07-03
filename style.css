@@ -1,64 +1,77 @@
-@media (prefers-color-scheme: light) {
-  * {
-    --fg: #111;
-    --bg: #fff;
-  }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
-  * {
-    --fg: #eee;
-    --bg: #111;
+  :root.system-theme {
+    --bg-color: #333333;
+    --text-color: #ffffff;
   }
-}
-
-.sr-only {
-  position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip-path: inset(50%);
-	border: 0;
-	clip: rect(0 0 0 0);
-}
-
-html {
-  font-size: 62.5%;
 }
 
 body {
-  color: var(--fg);
-  background-color: var(--bg);
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-body.color-scheme-dark {
-  color: #eee;
-  background-color: #111;
+header,
+footer {
+  text-align: center;
 }
 
-body.color-scheme-light {
-  color: #111;
-  background-color: #eee;
+header {
+  margin-bottom: 20px;
 }
 
-.logo {
-  display: inline-block;
-  width: 6.4rem;
-  height: 6.4rem;
-  background-repeat: no-repeat;
+footer {
+  margin-top: 20px;
 }
 
-@media (prefers-color-scheme: light) {
-  .logo {
-    background-image: url(allthatdev-light.png);
-  }
+pre {
+  text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    background-image: url(allthatdev-dark.png);
-  }
+code {
+  font-size: 200px;
 }
 
+dl,
+pre,
+code,
+kbd,
+samp,
+tt,
+var {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+dt,
+pre strong,
+pre b,
+code strong,
+code b,
+kbd strong,
+kbd b,
+samp strong,
+samp b,
+tt strong,
+tt b,
+var strong,
+var b {
+  font-weight: 700;
+}
+
+select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px;
+}
