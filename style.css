@@ -35,38 +35,22 @@ footer {
 
 pre {
   text-align: center;
+  container-type: inline-size;
 }
 
 code {
-  font-size: 200px;
-}
-
-dl,
-pre,
-code,
-kbd,
-samp,
-tt,
-var {
   font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+  font-weight: bold;
+  font-size: 20cqw;
 }
 
-dt,
-pre strong,
-pre b,
-code strong,
-code b,
-kbd strong,
-kbd b,
-samp strong,
-samp b,
-tt strong,
-tt b,
-var strong,
-var b {
-  font-weight: 700;
+dl {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: bold;
+}
+
+dd {
+  font-weight: normal;
 }
 
 select {
