@@ -1,13 +1,11 @@
-:root {
+:root.light-theme {
   --bg-color: #ffffff;
   --text-color: #333333;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root.system-theme {
-    --bg-color: #333333;
-    --text-color: #ffffff;
-  }
+:root.dark-theme {
+  --bg-color: #333333;
+  --text-color: #ffffff;
 }
 
 body {
@@ -39,13 +37,13 @@ pre {
 }
 
 code {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   font-size: 20cqw;
 }
 
 dl {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
 }
 
@@ -53,9 +51,33 @@ dd {
   font-weight: normal;
 }
 
-select {
+#themeCheck {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #999;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 5px;
+  top: 50px;
+  right: 50px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#themeCheck::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in;
+}
+
+#themeCheck:checked::before {
+  left: 32px;
 }
