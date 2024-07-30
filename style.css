@@ -32,14 +32,14 @@ footer {
 }
 
 pre {
-  text-align: center;
-  container-type: inline-size;
+  display: flex;
+  justify-content: center;
 }
 
 code {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
-  font-size: 20cqw;
+  font-size: 5em;
 }
 
 dl {
