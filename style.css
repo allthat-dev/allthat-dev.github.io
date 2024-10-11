@@ -8,10 +8,21 @@
   --bg-color: #333333;
   --text-color: #ffffff;
   --link-color: #0099ff;
+  --font-body: '7x12x3', sans-serif;
+  --font-code: '7x12x3', monospace;
+}
+
+@font-face {
+  font-family: '7x12x3';
+  src:
+    url('7x12x3.woff') format('woff'),
+    url('7x12x3.woff2') format('woff2'),
+    url('7x12x3.ttf') format('truetype'),
+    url('7x12x3.otf') format('opentype');
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -39,13 +50,12 @@ pre {
 }
 
 code {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-code);
   font-weight: bold;
   font-size: 5em;
 }
 
 dl {
-  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
 }
 
