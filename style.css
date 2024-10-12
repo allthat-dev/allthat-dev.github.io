@@ -1,13 +1,4 @@
-:root.light-theme {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --link-color: #0077cc;
-}
-
-:root.dark-theme {
-  --bg-color: #333333;
-  --text-color: #ffffff;
-  --link-color: #0099ff;
+:root {
   --font-body: '7x12x3', sans-serif;
   --font-code: '7x12x3', monospace;
 }
@@ -19,6 +10,18 @@
     url('7x12x3.woff2') format('woff2'),
     url('7x12x3.ttf') format('truetype'),
     url('7x12x3.otf') format('opentype');
+}
+
+:root.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #0077cc;
+}
+
+:root.dark-theme {
+  --bg-color: #333333;
+  --text-color: #ffffff;
+  --link-color: #0099ff;
 }
 
 body {
